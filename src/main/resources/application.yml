@@ -1,0 +1,35 @@
+---
+
+# HTTP message conversion Config
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+    converters:
+      preferred-json-mapper: jackson
+  jackson:
+    serialization.indent_output: true
+    time-zone: America/Sao_Paulo
+
+api:
+  username: api
+  password: 123456
+
+management:
+  health:
+    db:
+      enabled: true
+    defaults:
+      enabled: true
+    status:
+      order: DOWN, OUT_OF_SERVICE, UNKNOWN, UP
+  info:
+    build:
+      enabled: true
+    defaults:
+      enabled: true
+    env:
+      enabled: true
+
